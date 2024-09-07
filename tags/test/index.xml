@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Test on Bosco Ting</title>
-    <link>http://localhost:1313/tags/test/</link>
+    <link>https://boscoting.github.io/tags/test/</link>
     <description>Recent content in Test on Bosco Ting</description>
     <generator>Hugo -- 0.134.1</generator>
     <language>zh-tw</language>
     <lastBuildDate>Sat, 07 Sep 2024 15:49:14 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://boscoting.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello</title>
-      <link>http://localhost:1313/posts/hello/</link>
+      <link>https://boscoting.github.io/posts/hello/</link>
       <pubDate>Sat, 07 Sep 2024 15:49:14 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello/</guid>
+      <guid>https://boscoting.github.io/posts/hello/</guid>
       <description></description>
     </item>
   </channel>
