@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>AWS SAA C03 證照考取回顧 | Bosco Ting</title>
+<meta name="keywords" content="">
+<meta name="description" content="其實不論在工作，或者開發個人專案的時候，都不斷體會到思考廣度的重要，還有 Unknown unknown 的可怕之處。為了更全面地了解 AWS 的服務，附加初探軟體工程的架構面知識，我決定報考 AWS SAA，也期許自己未來遇到像是架構設計、技術選型等情境的時候能有更寬廣及專業的思路。
+準備
+自己準備的過程大概是：看教材和試解題目 → 刷題檢討 → 濃縮筆記 → 考試。
+影片教材
+我選擇的教材是這部 freeCodeCamp 的免費教學影片：
+AWS Solutions Architect Associate Certification (SAA-C03) – Full Course to PASS the Exam
+為什麼選這部教程？其實是當初在考慮要買推薦的 Udemy 課程時，剛好發現 freeCodeCamp 上傳了熱騰騰的 AWS SAA 教學影片，一共 50 個小時的免費課程，於是抱著勇於嘗試極度客家的精神開始看。
+這個教學會跟著 AWS Community Hero 一起探索幾乎所有 SAA 考試中可能出現的服務，好處是可以跟著他一起翻官方文件，觀察他嘗試解決問題直到成功建起服務的過程，但相反是跟著實作的過程可能會多花很多時間。
+全部看完後，我個人的感想是：若以我個人的考量再選一次，我可能會買 Udemy 上的課程，希望能以金錢換取時間，因為當初決定報考的時候，我在時間成本上有和其他學習規劃作取捨。不過既然看完了這部影片，假如有還在考慮這部教學影片跟我一樣客家的人，希望我的經驗可以有所幫助。
+我沒有看別人推薦的 Udemy 課程，所以只能對這部影片給一些心得。如果再看一遍這部教學，我會著重看以下幾個重點服務：
+
+S3 - 00:52:38
+VPC - 12:19:52
+IAM - 10:52:00
+EC2 - 19:14:03
+ASG- 23:49:42
+ELB - 21:30:14
+Route 53 - 21:57:20
+CloudFront - 22:01:00
+SQS - 27:04:35
+Kinesis - 34:32:58
+ElastiCache - 35:49:52
+DynamoDB - 44:29:11
+ECS: 45:53:10
+EKS Cloud: 46:20:27
+KMS - 46:21:45
+RDS: 41:40:19
+Aurora: 42:56:19
+EC2 Pricing Model - 50:10:55
+
+以上是在刷題和正式考試時比較頻繁出現的考點。重點看以上的片段可能可以獲得實際操作經驗加深印象，也避開一些不會考太細、能靠刷題來拿分的服務（這是我個人的心得，僅供參考，考試當下時間為：2024-08-30）。">
+<meta name="author" content="">
+<link rel="canonical" href="https://boscoting.github.io/posts/aws-certificate-reflection/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://boscoting.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://boscoting.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://boscoting.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://boscoting.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://boscoting.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://boscoting.github.io/posts/aws-certificate-reflection/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="AWS SAA C03 證照考取回顧" />
+<meta property="og:description" content="其實不論在工作，或者開發個人專案的時候，都不斷體會到思考廣度的重要，還有 Unknown unknown 的可怕之處。為了更全面地了解 AWS 的服務，附加初探軟體工程的架構面知識，我決定報考 AWS SAA，也期許自己未來遇到像是架構設計、技術選型等情境的時候能有更寬廣及專業的思路。
+準備
+自己準備的過程大概是：看教材和試解題目 → 刷題檢討 → 濃縮筆記 → 考試。
+影片教材
+我選擇的教材是這部 freeCodeCamp 的免費教學影片：
+AWS Solutions Architect Associate Certification (SAA-C03) – Full Course to PASS the Exam
+為什麼選這部教程？其實是當初在考慮要買推薦的 Udemy 課程時，剛好發現 freeCodeCamp 上傳了熱騰騰的 AWS SAA 教學影片，一共 50 個小時的免費課程，於是抱著勇於嘗試極度客家的精神開始看。
+這個教學會跟著 AWS Community Hero 一起探索幾乎所有 SAA 考試中可能出現的服務，好處是可以跟著他一起翻官方文件，觀察他嘗試解決問題直到成功建起服務的過程，但相反是跟著實作的過程可能會多花很多時間。
+全部看完後，我個人的感想是：若以我個人的考量再選一次，我可能會買 Udemy 上的課程，希望能以金錢換取時間，因為當初決定報考的時候，我在時間成本上有和其他學習規劃作取捨。不過既然看完了這部影片，假如有還在考慮這部教學影片跟我一樣客家的人，希望我的經驗可以有所幫助。
+我沒有看別人推薦的 Udemy 課程，所以只能對這部影片給一些心得。如果再看一遍這部教學，我會著重看以下幾個重點服務：
+
+S3 - 00:52:38
+VPC - 12:19:52
+IAM - 10:52:00
+EC2 - 19:14:03
+ASG- 23:49:42
+ELB - 21:30:14
+Route 53 - 21:57:20
+CloudFront - 22:01:00
+SQS - 27:04:35
+Kinesis - 34:32:58
+ElastiCache - 35:49:52
+DynamoDB - 44:29:11
+ECS: 45:53:10
+EKS Cloud: 46:20:27
+KMS - 46:21:45
+RDS: 41:40:19
+Aurora: 42:56:19
+EC2 Pricing Model - 50:10:55
+
+以上是在刷題和正式考試時比較頻繁出現的考點。重點看以上的片段可能可以獲得實際操作經驗加深印象，也避開一些不會考太細、能靠刷題來拿分的服務（這是我個人的心得，僅供參考，考試當下時間為：2024-08-30）。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://boscoting.github.io/posts/aws-certificate-reflection/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-09-07T18:01:45+08:00" />
+<meta property="article:modified_time" content="2024-09-07T18:01:45+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AWS SAA C03 證照考取回顧"/>
+<meta name="twitter:description" content="其實不論在工作，或者開發個人專案的時候，都不斷體會到思考廣度的重要，還有 Unknown unknown 的可怕之處。為了更全面地了解 AWS 的服務，附加初探軟體工程的架構面知識，我決定報考 AWS SAA，也期許自己未來遇到像是架構設計、技術選型等情境的時候能有更寬廣及專業的思路。
+準備
+自己準備的過程大概是：看教材和試解題目 → 刷題檢討 → 濃縮筆記 → 考試。
+影片教材
+我選擇的教材是這部 freeCodeCamp 的免費教學影片：
+AWS Solutions Architect Associate Certification (SAA-C03) – Full Course to PASS the Exam
+為什麼選這部教程？其實是當初在考慮要買推薦的 Udemy 課程時，剛好發現 freeCodeCamp 上傳了熱騰騰的 AWS SAA 教學影片，一共 50 個小時的免費課程，於是抱著勇於嘗試極度客家的精神開始看。
+這個教學會跟著 AWS Community Hero 一起探索幾乎所有 SAA 考試中可能出現的服務，好處是可以跟著他一起翻官方文件，觀察他嘗試解決問題直到成功建起服務的過程，但相反是跟著實作的過程可能會多花很多時間。
+全部看完後，我個人的感想是：若以我個人的考量再選一次，我可能會買 Udemy 上的課程，希望能以金錢換取時間，因為當初決定報考的時候，我在時間成本上有和其他學習規劃作取捨。不過既然看完了這部影片，假如有還在考慮這部教學影片跟我一樣客家的人，希望我的經驗可以有所幫助。
+我沒有看別人推薦的 Udemy 課程，所以只能對這部影片給一些心得。如果再看一遍這部教學，我會著重看以下幾個重點服務：
+
+S3 - 00:52:38
+VPC - 12:19:52
+IAM - 10:52:00
+EC2 - 19:14:03
+ASG- 23:49:42
+ELB - 21:30:14
+Route 53 - 21:57:20
+CloudFront - 22:01:00
+SQS - 27:04:35
+Kinesis - 34:32:58
+ElastiCache - 35:49:52
+DynamoDB - 44:29:11
+ECS: 45:53:10
+EKS Cloud: 46:20:27
+KMS - 46:21:45
+RDS: 41:40:19
+Aurora: 42:56:19
+EC2 Pricing Model - 50:10:55
+
+以上是在刷題和正式考試時比較頻繁出現的考點。重點看以上的片段可能可以獲得實際操作經驗加深印象，也避開一些不會考太細、能靠刷題來拿分的服務（這是我個人的心得，僅供參考，考試當下時間為：2024-08-30）。"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://boscoting.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "AWS SAA C03 證照考取回顧",
+      "item": "https://boscoting.github.io/posts/aws-certificate-reflection/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AWS SAA C03 證照考取回顧",
+  "name": "AWS SAA C03 證照考取回顧",
+  "description": "其實不論在工作，或者開發個人專案的時候，都不斷體會到思考廣度的重要，還有 Unknown unknown 的可怕之處。為了更全面地了解 AWS 的服務，附加初探軟體工程的架構面知識，我決定報考 AWS SAA，也期許自己未來遇到像是架構設計、技術選型等情境的時候能有更寬廣及專業的思路。\n準備 自己準備的過程大概是：看教材和試解題目 → 刷題檢討 → 濃縮筆記 → 考試。\n影片教材 我選擇的教材是這部 freeCodeCamp 的免費教學影片：\nAWS Solutions Architect Associate Certification (SAA-C03) – Full Course to PASS the Exam\n為什麼選這部教程？其實是當初在考慮要買推薦的 Udemy 課程時，剛好發現 freeCodeCamp 上傳了熱騰騰的 AWS SAA 教學影片，一共 50 個小時的免費課程，於是抱著勇於嘗試極度客家的精神開始看。\n這個教學會跟著 AWS Community Hero 一起探索幾乎所有 SAA 考試中可能出現的服務，好處是可以跟著他一起翻官方文件，觀察他嘗試解決問題直到成功建起服務的過程，但相反是跟著實作的過程可能會多花很多時間。\n全部看完後，我個人的感想是：若以我個人的考量再選一次，我可能會買 Udemy 上的課程，希望能以金錢換取時間，因為當初決定報考的時候，我在時間成本上有和其他學習規劃作取捨。不過既然看完了這部影片，假如有還在考慮這部教學影片跟我一樣客家的人，希望我的經驗可以有所幫助。\n我沒有看別人推薦的 Udemy 課程，所以只能對這部影片給一些心得。如果再看一遍這部教學，我會著重看以下幾個重點服務：\nS3 - 00:52:38 VPC - 12:19:52 IAM - 10:52:00 EC2 - 19:14:03 ASG- 23:49:42 ELB - 21:30:14 Route 53 - 21:57:20 CloudFront - 22:01:00 SQS - 27:04:35 Kinesis - 34:32:58 ElastiCache - 35:49:52 DynamoDB - 44:29:11 ECS: 45:53:10 EKS Cloud: 46:20:27 KMS - 46:21:45 RDS: 41:40:19 Aurora: 42:56:19 EC2 Pricing Model - 50:10:55 以上是在刷題和正式考試時比較頻繁出現的考點。重點看以上的片段可能可以獲得實際操作經驗加深印象，也避開一些不會考太細、能靠刷題來拿分的服務（這是我個人的心得，僅供參考，考試當下時間為：2024-08-30）。\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "其實不論在工作，或者開發個人專案的時候，都不斷體會到思考廣度的重要，還有 Unknown unknown 的可怕之處。為了更全面地了解 AWS 的服務，附加初探軟體工程的架構面知識，我決定報考 AWS SAA，也期許自己未來遇到像是架構設計、技術選型等情境的時候能有更寬廣及專業的思路。\n準備 自己準備的過程大概是：看教材和試解題目 → 刷題檢討 → 濃縮筆記 → 考試。\n影片教材 我選擇的教材是這部 freeCodeCamp 的免費教學影片：\nAWS Solutions Architect Associate Certification (SAA-C03) – Full Course to PASS the Exam\n為什麼選這部教程？其實是當初在考慮要買推薦的 Udemy 課程時，剛好發現 freeCodeCamp 上傳了熱騰騰的 AWS SAA 教學影片，一共 50 個小時的免費課程，於是抱著勇於嘗試極度客家的精神開始看。\n這個教學會跟著 AWS Community Hero 一起探索幾乎所有 SAA 考試中可能出現的服務，好處是可以跟著他一起翻官方文件，觀察他嘗試解決問題直到成功建起服務的過程，但相反是跟著實作的過程可能會多花很多時間。\n全部看完後，我個人的感想是：若以我個人的考量再選一次，我可能會買 Udemy 上的課程，希望能以金錢換取時間，因為當初決定報考的時候，我在時間成本上有和其他學習規劃作取捨。不過既然看完了這部影片，假如有還在考慮這部教學影片跟我一樣客家的人，希望我的經驗可以有所幫助。\n我沒有看別人推薦的 Udemy 課程，所以只能對這部影片給一些心得。如果再看一遍這部教學，我會著重看以下幾個重點服務：\nS3 - 00:52:38 VPC - 12:19:52 IAM - 10:52:00 EC2 - 19:14:03 ASG- 23:49:42 ELB - 21:30:14 Route 53 - 21:57:20 CloudFront - 22:01:00 SQS - 27:04:35 Kinesis - 34:32:58 ElastiCache - 35:49:52 DynamoDB - 44:29:11 ECS: 45:53:10 EKS Cloud: 46:20:27 KMS - 46:21:45 RDS: 41:40:19 Aurora: 42:56:19 EC2 Pricing Model - 50:10:55 以上是在刷題和正式考試時比較頻繁出現的考點。重點看以上的片段可能可以獲得實際操作經驗加深印象，也避開一些不會考太細、能靠刷題來拿分的服務（這是我個人的心得，僅供參考，考試當下時間為：2024-08-30）。\n練習題 練習題是同事推薦的 Udemy 練習題，目前共有 6 回，正式考完後覺得效果不錯。\nAWS Certified Solutions Architect Associate Practice Exams\n自己是寫過一遍後，檢討時留下一些筆記，考前重複看。正式考完時感覺許多題目有相似到，若有時間這份練習題可以看第二遍。\n正式考試 關於要準備的證件有額外再打給考場確認，考試當天我是帶身分證跟第二證件（如駕照）。到考場簽名和拍照後，進到有幾個電腦座位跟隔間的小房間開始考試。\n考完出來後被考場人員問有沒有通過，但沒印象有看到結果，很驚訝是不是自己選擇性漏看未通過的訊息xD（後來查了一下，SAA 考試應該是不會當下顯示結果）。隔天早上 email 先收到 Creds 提供的勳章，晚點接著收到 AWS 官方通知通過。\n心得 過程雖然花了不少時間，但對軟體的架構面有了進一步的認識，也更清楚 AWS 各種雲端服務在架構上之間的關係，甚至對 AWS CLI、SDK~~、網站介面跟官方文件~~的操作也變得更熟悉。\n其中跟著影片實作時，最有感的幾個環節應該是 S3 的 CRUD、IAM 配置，還有寫 CFN 模板。寫好 .yml、透過 CFN 一次建立多個服務，並且成功串在一起時會鬆一口氣，而練習完後只要把 stack 刪掉，就可以把相關的服務一次清空，用起來莫名地有點開心。\n最後，當然還有實際拿到證照，放進個人頁面的成就感。得知通過的當下很高興，心想這階段終於順利告一段落了。期待在之後專案中的實際應用！\n",
+  "wordCount" : "153",
+  "inLanguage": "en",
+  "datePublished": "2024-09-07T18:01:45+08:00",
+  "dateModified": "2024-09-07T18:01:45+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://boscoting.github.io/posts/aws-certificate-reflection/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bosco Ting",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://boscoting.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://boscoting.github.io/" accesskey="h" title="Bosco Ting (Alt + H)">Bosco Ting</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      AWS SAA C03 證照考取回顧
+    </h1>
+    <div class="post-meta"><span title='2024-09-07 18:01:45 +0800 CST'>September 7, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>其實不論在工作，或者開發個人專案的時候，都不斷體會到思考廣度的重要，還有 Unknown unknown 的可怕之處。為了更全面地了解 AWS 的服務，附加初探軟體工程的架構面知識，我決定報考 AWS SAA，也期許自己未來遇到像是架構設計、技術選型等情境的時候能有更寬廣及專業的思路。</p>
+<h2 id="準備">準備<a hidden class="anchor" aria-hidden="true" href="#準備">#</a></h2>
+<p>自己準備的過程大概是：看教材和試解題目 → 刷題檢討 → 濃縮筆記 → 考試。</p>
+<h3 id="影片教材">影片教材<a hidden class="anchor" aria-hidden="true" href="#影片教材">#</a></h3>
+<p>我選擇的教材是這部 freeCodeCamp 的免費教學影片：</p>
+<p><a href="https://www.youtube.com/watch?v=c3Cn4xYfxJY&amp;t=3092s">AWS Solutions Architect Associate Certification (SAA-C03) – Full Course to PASS the Exam</a></p>
+<p>為什麼選這部教程？其實是當初在考慮要買推薦的 Udemy 課程時，剛好發現 freeCodeCamp 上傳了熱騰騰的 AWS SAA 教學影片，一共 50 個小時的免費課程，於是抱著勇於嘗試<del>極度客家</del>的精神開始看。</p>
+<p>這個教學會跟著 AWS Community Hero 一起探索幾乎所有 SAA 考試中可能出現的服務，好處是可以跟著他一起翻官方文件，觀察他嘗試解決問題直到成功建起服務的過程，但相反是跟著實作的過程可能會多花很多時間。</p>
+<p>全部看完後，我個人的感想是：若以我個人的考量再選一次，我可能會買 Udemy 上的課程，希望能以金錢換取時間，因為當初決定報考的時候，我在時間成本上有和其他學習規劃作取捨。不過既然看完了這部影片，假如有還在考慮這部教學影片<del>跟我一樣客家</del>的人，希望我的經驗可以有所幫助。</p>
+<p>我沒有看別人推薦的 Udemy 課程，所以只能對這部影片給一些心得。如果再看一遍這部教學，我會著重看以下幾個重點服務：</p>
+<ol>
+<li><strong>S3</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">00:52:38</a></li>
+<li><strong>VPC</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">12:19:52</a></li>
+<li><strong>IAM</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">10:52:00</a></li>
+<li><strong>EC2</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">19:14:03</a></li>
+<li><strong>ASG</strong>- <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">23:49:42</a></li>
+<li><strong>ELB</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">21:30:14</a></li>
+<li><strong>Route 53</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">21:57:20</a></li>
+<li><strong>CloudFront</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">22:01:00</a></li>
+<li><strong>SQS</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">27:04:35</a></li>
+<li><strong>Kinesis</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">34:32:58</a></li>
+<li><strong>ElastiCache</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">35:49:52</a></li>
+<li><strong>DynamoDB</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">44:29:11</a></li>
+<li><strong>ECS</strong>: <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">45:53:10</a></li>
+<li><strong>EKS Cloud</strong>: <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">46:20:27</a></li>
+<li><strong>KMS</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">46:21:45</a></li>
+<li><strong>RDS</strong>: <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">41:40:19</a></li>
+<li><strong>Aurora</strong>: <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">42:56:19</a></li>
+<li><strong>EC2 Pricing Model</strong> - <a href="https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21">50:10:55</a></li>
+</ol>
+<p>以上是在刷題和正式考試時比較頻繁出現的考點。重點看以上的片段可能可以獲得實際操作經驗加深印象，也避開一些不會考太細、能靠刷題來拿分的服務（這是我個人的心得，僅供參考，考試當下時間為：<strong>2024-08-30</strong>）。</p>
+<h3 id="練習題">練習題<a hidden class="anchor" aria-hidden="true" href="#練習題">#</a></h3>
+<p>練習題是同事推薦的 <a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c03/?LSNPUBID=0wsuN4lypZM&amp;ranEAID=0wsuN4lypZM&amp;ranMID=39197&amp;ranSiteID=0wsuN4lypZM-9zfE2wLv7jwUkfEhlPUgRg&amp;couponCode=2021PM20">Udemy 練習題</a>，目前共有 6 回，正式考完後覺得效果不錯。</p>
+<p><a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c03/?LSNPUBID=0wsuN4lypZM&amp;ranEAID=0wsuN4lypZM&amp;ranMID=39197&amp;ranSiteID=0wsuN4lypZM-9zfE2wLv7jwUkfEhlPUgRg&amp;couponCode=2021PM20">AWS Certified Solutions Architect Associate Practice Exams</a></p>
+<p>自己是寫過一遍後，檢討時留下一些筆記，考前重複看。正式考完時感覺許多題目有相似到，若有時間這份練習題可以看第二遍。</p>
+<h2 id="正式考試">正式考試<a hidden class="anchor" aria-hidden="true" href="#正式考試">#</a></h2>
+<p>關於要準備的證件有額外再打給考場確認，考試當天我是帶身分證跟第二證件（如駕照）。到考場簽名和拍照後，進到有幾個電腦座位跟隔間的小房間開始考試。</p>
+<p>考完出來後被考場人員問有沒有通過，但沒印象有看到結果，很驚訝是不是自己選擇性漏看未通過的訊息xD（後來查了一下，SAA 考試應該是不會當下顯示結果）。隔天早上 email 先收到 Creds 提供的勳章，晚點接著收到 AWS 官方通知通過。</p>
+<h2 id="心得">心得<a hidden class="anchor" aria-hidden="true" href="#心得">#</a></h2>
+<p>過程雖然花了不少時間，但對軟體的架構面有了進一步的認識，也更清楚 AWS 各種雲端服務在架構上之間的關係，甚至對 AWS CLI、SDK~~、網站介面跟官方文件~~的操作也變得更熟悉。</p>
+<p>其中跟著影片實作時，最有感的幾個環節應該是 S3 的 CRUD、IAM 配置，還有寫 CFN 模板。寫好 .yml、透過 CFN 一次建立多個服務，並且成功串在一起時會鬆一口氣，而練習完後只要把 stack 刪掉，就可以把相關的服務一次清空，用起來莫名地有點開心。</p>
+<p>最後，當然還有實際拿到證照，放進個人頁面的成就感。得知通過的當下很高興，心想這階段終於順利告一段落了。期待在之後專案中的實際應用！</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://boscoting.github.io/">Bosco Ting</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
