@@ -6,15 +6,44 @@
     <description>Recent content in Posts on Bosco Ting</description>
     <generator>Hugo -- 0.134.1</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 12 Jan 2025 15:15:36 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2024 18:01:45 +0800</lastBuildDate>
     <atom:link href="https://boscoting.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Leetcode 287 - Find Duplicate Number</title>
-      <link>https://boscoting.github.io/posts/leetcode_287/</link>
-      <pubDate>Sun, 12 Jan 2025 15:15:36 +0800</pubDate>
-      <guid>https://boscoting.github.io/posts/leetcode_287/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../../assets/leetcode_287.jpg&#34; alt=&#34;Note&#34;  /&gt;
-&lt;/p&gt;</description>
+      <title>AWS SAA C03 證照考取回顧</title>
+      <link>https://boscoting.github.io/posts/aws-certificate-reflection/</link>
+      <pubDate>Sat, 07 Sep 2024 18:01:45 +0800</pubDate>
+      <guid>https://boscoting.github.io/posts/aws-certificate-reflection/</guid>
+      <description>&lt;p&gt;其實不論在工作，或者開發個人專案的時候，都不斷體會到思考廣度的重要，還有 Unknown unknown 的可怕之處。為了更全面地了解 AWS 的服務，附加初探軟體工程的架構面知識，我決定報考 AWS SAA，也期許自己未來遇到像是架構設計、技術選型等情境的時候能有更寬廣及專業的思路。&lt;/p&gt;
+&lt;h2 id=&#34;準備&#34;&gt;準備&lt;/h2&gt;
+&lt;p&gt;自己準備的過程大概是：看教材和試解題目 → 刷題檢討 → 濃縮筆記 → 考試。&lt;/p&gt;
+&lt;h3 id=&#34;影片教材&#34;&gt;影片教材&lt;/h3&gt;
+&lt;p&gt;我選擇的教材是這部 freeCodeCamp 的免費教學影片：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=c3Cn4xYfxJY&amp;amp;t=3092s&#34;&gt;AWS Solutions Architect Associate Certification (SAA-C03) – Full Course to PASS the Exam&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;為什麼選這部教程？其實是當初在考慮要買推薦的 Udemy 課程時，剛好發現 freeCodeCamp 上傳了熱騰騰的 AWS SAA 教學影片，一共 50 個小時的免費課程，於是抱著勇於嘗試&lt;del&gt;極度客家&lt;/del&gt;的精神開始看。&lt;/p&gt;
+&lt;p&gt;這個教學會跟著 AWS Community Hero 一起探索幾乎所有 SAA 考試中可能出現的服務，好處是可以跟著他一起翻官方文件，觀察他嘗試解決問題直到成功建起服務的過程，但相反是跟著實作的過程可能會多花很多時間。&lt;/p&gt;
+&lt;p&gt;全部看完後，我個人的感想是：若以我個人的考量再選一次，我可能會買 Udemy 上的課程，希望能以金錢換取時間，因為當初決定報考的時候，我在時間成本上有和其他學習規劃作取捨。不過既然看完了這部影片，假如有還在考慮這部教學影片&lt;del&gt;跟我一樣客家&lt;/del&gt;的人，希望我的經驗可以有所幫助。&lt;/p&gt;
+&lt;p&gt;我沒有看別人推薦的 Udemy 課程，所以只能對這部影片給一些心得。如果再看一遍這部教學，我會著重看以下幾個重點服務：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;S3&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;00:52:38&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VPC&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;12:19:52&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IAM&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;10:52:00&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EC2&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;19:14:03&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ASG&lt;/strong&gt;- &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;23:49:42&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ELB&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;21:30:14&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Route 53&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;21:57:20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CloudFront&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;22:01:00&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SQS&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;27:04:35&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kinesis&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;34:32:58&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ElastiCache&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;35:49:52&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DynamoDB&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;44:29:11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ECS&lt;/strong&gt;: &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;45:53:10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EKS Cloud&lt;/strong&gt;: &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;46:20:27&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KMS&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;46:21:45&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RDS&lt;/strong&gt;: &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;41:40:19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Aurora&lt;/strong&gt;: &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;42:56:19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EC2 Pricing Model&lt;/strong&gt; - &lt;a href=&#34;https://www.notion.so/AWS-SAA-a7db68aa120446a59a43747dfa1ca701?pvs=21&#34;&gt;50:10:55&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上是在刷題和正式考試時比較頻繁出現的考點。重點看以上的片段可能可以獲得實際操作經驗加深印象，也避開一些不會考太細、能靠刷題來拿分的服務（這是我個人的心得，僅供參考，考試當下時間為：&lt;strong&gt;2024-08-30&lt;/strong&gt;）。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
